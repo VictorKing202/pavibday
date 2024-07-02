@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7CAC9; /* colorful background */
+        }
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: #F7CAC9; /* colorful background */
+        }
+        .button {
+            font-size: 24px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .balloon {
+            width: 50px;
+            height: 50px;
+        }
+        .left {
+            left: 20px;
+        }
+        .right {
+            right: 20px;
+        }
+        .birthday-text {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 50px;
+            color: #FF69B4;
+        }
+        .quotes {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            color: #33CC33;
+        }
+        .personal_text {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+        .response-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .response-input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 50%;
+        }
+        .response-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            background-color: #0066CC;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div class="page" id="page1">
+        <button class="button" style="background-color: #FF69B4;" onclick="nextPage()">OI</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="page2" style="display: none;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <button class="button" style="background-color: #33CC33;" onclick="nextPage()">Naan Unga Kitta Onnu Sollanum</button>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="page3" style="display: none;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <button class="button" style="background-color: black;" onclick="nextPage()">Thappa Nenaichukathinga</button>
+        </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="page4" style="display: none;">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <button class="button" style="background-color: #0066CC;" onclick="nextPage()">Summa for Fun</button>
+        </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page" id="page5" style="display: none;">
+        <div class="balloons">
+            <img src="balloon.gif" alt="Balloon" class="balloon left">
+            <img src="balloon.gif" alt="Balloon" class="balloon right">
+        </div>
+        <div style="text-align: center; height: 100vh; padding: 20px;">
+            <!-- Happy Birthday Pavithra -->
+            <h1 class="birthday-text" style="font-size: 36px; color: #FF69B4; margin-bottom: 20px;">Happy Birthday Pavithra!</h1>
+            
+        
+            <!-- Personal Message -->
+            <p class="personal_text" style="font-size: 20px; color: black; margin-bottom: 20px;">I wanted to take this opportunity to express my feelings to you. and I'm so grateful to have you in my life. I hope you have an amazing birthday and that this website brings a smile to your face.</p>
+            
+            <!-- Birthday Wish -->
+            <p class="personal_text" style="font-size: 20px; color: #6600CC; margin-bottom: 20px;">Hey Pavi 😊, I just want to wish you a very happy birthday! It's hard to believe it's been 5 months since we became good friends, and today is your special day. I want you to know that I have a strong feeling that you're going to get placed in a company soon, and I wish you all the best to reach great heights in life. Thank you for everything you've done for me. 🙏</p>
+             
+            <!-- Quote -->
+            <p class="quotes" style="font-size:18px; color: black; margin-bottom: 30px;">"The right time will take you to a better place, so wait patiently and let things unfold."</p>
+            
+            
+            <!-- Video -->
+            <div style="margin-bottom: 20px;">
+                <video id="birthday-video" autoplay loop>
+                    <source src="happybirthday.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!-- Response form -->
+            <div class="response-form" style="background-color: #F7CAC9; padding: 20px;">
+                <p>React with an emoji:</p>
+                <button class="emoji-button" onclick="reactWithEmoji('😊')">😊</button>
+                <button class="emoji-button" onclick="reactWithEmoji('❤️')">❤️</button>
+                <button class="emoji-button" onclick="reactWithEmoji('🎉')">🎉</button>
+                <button class="emoji-button" onclick="reactWithEmoji('😍')">😍</button>
+                <div id="reaction-container" style="margin-top: 10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+
+        function nextPage() {
+            document.getElementById(`page${currentPage}`).style.display = 'none';
+            currentPage++;
+            document.getElementById(`page${currentPage}`).style.display ='block';
+            if (currentPage === 5) {
+                document.getElementById('birthday-video').play();
+            }
+        }
+
+        function reactWithEmoji(emoji) {
+            const reactionContainer = document.getElementById('reaction-container');
+            const reactionElement = document.createElement('span');
+            reactionElement.textContent = emoji;
+            reactionContainer.appendChild(reactionElement);
+        }
+    </script>
+</body>
+</html>

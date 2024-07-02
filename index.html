@@ -115,41 +115,44 @@
     </div>
 
     <!-- Page 5 -->
-<div class="page" id="page5" style="display: none;">
-    <div class="balloons">
-        <img src="balloon.gif" alt="Balloon" class="balloon left">
-        <img src="balloon.gif" alt="Balloon" class="balloon right">
-    </div>
-    <div style="text-align: center; height: 100vh; padding: 20px;">
-        <!-- Happy Birthday Pavithra -->
-        <h1 class="birthday-text" style="font-size: 36px; color: #FF69B4; margin-bottom: 20px;">Happy Birthday Pavithra!</h1>
-        
-        <!-- Quote -->
-        <p class="quotes" style="font-size: 18px; color: #33CC33; margin-bottom: 20px;">Wishing you a day as bright as your smile and as beautiful as you are!</p>
-        
-        <!-- Personal Message -->
-        <p class="personal_text" style="font-size: 20px; color: black; margin-bottom: 20px;">I wanted to take this opportunity to express my feelings to you. You mean the world to me, and I'm so grateful to have you in my life. I hope you have an amazing birthday and that this website brings a smile to your face.</p>
-        
-        <!-- Video -->
-        <div style="margin-bottom: 20px;">
-            <video id="birthday-video" autoplay loop>
-                <source src="happybirthday.mp4" type="video/mp4">
-            </video>
+    <div class="page" id="page5" style="display: none;">
+        <div class="balloons">
+            <img src="balloon.gif" alt="Balloon" class="balloon left">
+            <img src="balloon.gif" alt="Balloon" class="balloon right">
         </div>
+        <div style="text-align: center; height: 100vh; padding: 20px;">
+            <!-- Happy Birthday Pavithra -->
+            <h1 class="birthday-text" style="font-size: 36px; color: #FF69B4; margin-bottom: 20px;">Happy Birthday Pavithra!</h1>
+            
         
-        <!-- Response form -->
-        <div class="response-form" style="background-color: #F7CAC9; padding: 20px;">
-            <p>React with an emoji:</p>
-            <button class="emoji-button" onclick="reactWithEmoji('😊')">😊</button>
-            <button class="emoji-button" onclick="reactWithEmoji('❤️')">❤️</button>
-            <button class="emoji-button" onclick="reactWithEmoji('🎉')">🎉</button>
-            <button class="emoji-button" onclick="reactWithEmoji('😍')">😍</button>
-            <div id="reaction-container" style="margin-top: 10px;"></div>
+            <!-- Personal Message -->
+            <p class="personal_text" style="font-size: 20px; color: black; margin-bottom: 20px;">I wanted to take this opportunity to express my feelings to you. and I'm so grateful to have you in my life. I hope you have an amazing birthday and that this website brings a smile to your face.</p>
+            
+            <!-- Birthday Wish -->
+            <p class="personal_text" style="font-size: 20px; color: #6600CC; margin-bottom: 20px;">Hey Pavi 😊, I just want to wish you a very happy birthday! It's hard to believe it's been 5 months since we became good friends, and today is your special day. I want you to know that I have a strong feeling that you're going to get placed in a company soon, and I wish you all the best to reach great heights in life. Thank you for everything you've done for me. 🙏</p>
+             
+            <!-- Quote -->
+            <p class="quotes" style="font-size:18px; color: black; margin-bottom: 30px;">"The right time will take you to a better place, so wait patiently and let things unfold."</p>
+            
+            
+            <!-- Video -->
+            <div style="margin-bottom: 20px;">
+                <video id="birthday-video" autoplay loop>
+                    <source src="happybirthday.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!-- Response form -->
+            <div class="response-form" style="background-color: #F7CAC9; padding: 20px;">
+                <p>React with an emoji:</p>
+                <button class="emoji-button" onclick="reactWithEmoji('😊')">😊</button>
+                <button class="emoji-button" onclick="reactWithEmoji('❤️')">❤️</button>
+                <button class="emoji-button" onclick="reactWithEmoji('🎉')">🎉</button>
+                <button class="emoji-button" onclick="reactWithEmoji('😍')">😍</button>
+                <div id="reaction-container" style="margin-top: 10px;"></div>
+            </div>
         </div>
     </div>
-</div>
-    <div>
-    
 
     <script>
         let currentPage = 1;
@@ -170,6 +173,5 @@
             reactionContainer.appendChild(reactionElement);
         }
     </script>
-    </div>
 </body>
 </html>
